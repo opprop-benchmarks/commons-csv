@@ -17,23 +17,25 @@
 
 package org.apache.commons.csv;
 
+import org.checkerframework.common.value.qual.IntVal;
+
 /**
  * Constants for this package.
  */
 final class Constants {
 
-    static final char BACKSLASH = '\\';
+    static final @IntVal(92) char BACKSLASH = '\\';
 
-    static final char BACKSPACE = '\b';
+    static final @IntVal(8) char BACKSPACE = '\b';
 
-    static final char COMMA = ',';
+    static final @IntVal(44) char COMMA = ',';
 
     /**
      * Starts a comment, the remainder of the line is the comment.
      */
-    static final char COMMENT = '#';
+    static final @IntVal(35) char COMMENT = '#';
 
-    static final char CR = '\r';
+    static final @IntVal(13) char CR = '\r';
 
     /** RFC 4180 defines line breaks as CRLF */
     static final String CRLF = "\r\n";
@@ -43,11 +45,11 @@ final class Constants {
     static final String EMPTY = "";
 
     /** The end of stream symbol */
-    static final int END_OF_STREAM = -1;
+    static final @IntVal(-1) int END_OF_STREAM = -1;
 
-    static final char FF = '\f';
+    static final @IntVal(12) char FF = '\f';
 
-    static final char LF = '\n';
+    static final @IntVal(10) char LF = '\n';
 
     /**
      * Unicode line separator.
@@ -64,19 +66,19 @@ final class Constants {
      */
     static final String PARAGRAPH_SEPARATOR = "\u2029";
 
-    static final char PIPE = '|';
+    static final @IntVal(124) char PIPE = '|';
 
     /** ASCII record separator */
-    static final char RS = 30;
+    static final @IntVal(30) char RS = 30;
 
-    static final char SP = ' ';
+    static final @IntVal(32) char SP = ' ';
 
-    static final char TAB = '\t';
+    static final @IntVal(9) char TAB = '\t';
 
     /** Undefined state for the lookahead char */
-    static final int UNDEFINED = -2;
+    static final @IntVal(-2) int UNDEFINED = -2;
 
     /** ASCII unit separator */
-    static final char US = 31;
+    static final @IntVal(31) char US = 31;
 
 }

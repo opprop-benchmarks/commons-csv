@@ -26,6 +26,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
 
+import org.checkerframework.common.value.qual.IntRange;
+
 /**
  * A special buffered reader which supports sophisticated read access.
  * <p>
@@ -54,7 +56,7 @@ final class ExtendedBufferedReader extends BufferedReader {
     }
 
     @Override
-    public int read() throws IOException {
+    public @IntRange(from=-1, to=65535) int read() throws IOException {
         final int current = super.read();
         if (current == CR || current == LF && lastChar != CR) {
             eolCounter++;
